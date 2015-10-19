@@ -1,0 +1,12 @@
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\DataAccess.dll
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\DataAccess.pdb
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\obj\Debug\DataAccess.dll
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\obj\Debug\DataAccess.pdb
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\DataAccess.dll.config
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\Domain.dll
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\EntityFramework.dll
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\Domain.pdb
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\EntityFramework.xml
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\EntityFramework.SqlServer.xml

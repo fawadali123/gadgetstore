@@ -1,0 +1,5 @@
+E:\MVC\AngularFeatWebApi\GadgetStore\Domain\bin\Debug\Domain.dll
+E:\MVC\AngularFeatWebApi\GadgetStore\Domain\bin\Debug\Domain.pdb
+E:\MVC\AngularFeatWebApi\GadgetStore\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+E:\MVC\AngularFeatWebApi\GadgetStore\Domain\obj\Debug\Domain.dll
+E:\MVC\AngularFeatWebApi\GadgetStore\Domain\obj\Debug\Domain.pdb
