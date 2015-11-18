@@ -1,12 +1,12 @@
 ﻿<div class="" ng-controller="gadgetsCtrl" ng-hide="data.error">
-    <div class="col-xs-3">
+    <div class="col-xs-2">
         <a ng-click="selectCategory()" class="btn btn-block btn-default btn-lg">Home</a>
         <a ng-repeat="item in data.categories | orderBy:'CategoryID'" ng-click="selectCategory(item.CategoryID)"
            class=" btn btn-block btn-default btn-lg" ng-class="getCategoryClass(item.CategoryID)">
             {{item.Name}}
         </a>
     </div>
-    <div class="col-xs-9">
+    <div class="col-xs-10">
         <div class="panel panel-default" ng-repeat="item in data.gadgets | filter:categoryFilterFn | filter:searchItem | range:selectedPage:pageSize">
             <div class="panel-heading">
                 <strong>{{item.Name}}</strong>
@@ -17,7 +17,7 @@
             <div class="panel-body">
                 <div class="media">
                     <a class="pull-left" href="#">
-                        <img class="media-object" ng-src="../../images/{{item.Image}}" />
+                        <img class="media-object" ng-src="../../Images/image-not-found.jpg" style="width:100px;height:100px" />
                     </a>
                     <div class="media-body">
                         <span class="lead">{{item.Description}}</span>

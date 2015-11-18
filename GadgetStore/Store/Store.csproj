@@ -99,10 +99,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\Components\cartCmp.js" />
+    <Content Include="app\Controllers\checkoutController.js" />
     <Content Include="app\Controllers\gadgetsCtrl.js" />
     <Content Include="app\Controllers\gadgetStoreCtrl.js" />
+    <Content Include="app\Filters\storeFilter.js" />
     <Content Include="app\mainApp.js" />
+    <Content Include="app\Components\cartDetails.html" />
+    <Content Include="app\Views\checkout.html" />
     <Content Include="app\Views\gadgets.html" />
+    <Content Include="app\Views\orderSubmitted.html" />
+    <Content Include="app\Views\submitOrder.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -112,6 +119,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Images\image-not-found.jpg" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -898,7 +906,9 @@
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\jquery-1.9.0.min.map" />
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -910,14 +920,20 @@
     <Compile Include="Controllers\GadgetsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\TempOrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\SessionEnabledControllerHandler.cs" />
+    <Compile Include="Infrastructure\SessionEnabledHttpControllerRouteHandler.cs" />
+    <Compile Include="Models\CartItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Home\ViewOrder.cshtml" />
+    <Content Include="Views\Shared\Order.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -926,10 +942,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\Components\" />
-    <Folder Include="app\Filters\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
