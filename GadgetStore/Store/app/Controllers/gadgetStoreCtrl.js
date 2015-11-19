@@ -3,8 +3,10 @@
     .constant('ordersUrl', 'http://localhost:52674/api/orders')
     .constant('categoriesUrl', 'http://localhost:52674/api/categories')
     .constant('tempOrdersUrl',     'http://localhost:52674/api/sessions/temporders/gettemporders')
-    .constant('saveTempOrdersUrl', 'http://localhost:52674/api/sessions/temporders/savetemporder')                                    
-    .controller('gadgetStoreCtrl', function ($scope, $http, $location, gadgetsUrl, categoriesUrl, ordersUrl,tempOrdersUrl,saveTempOrdersUrl, cart) {
+    .constant('saveTempOrdersUrl', 'http://localhost:52674/api/sessions/temporders/savetemporder')
+    .constant('tokenUrl', '/Token')
+    .constant('tokenKey', 'accessToken')
+    .controller('gadgetStoreCtrl', function ($scope, $http, $location, gadgetsUrl, categoriesUrl, ordersUrl,tempOrdersUrl,saveTempOrdersUrl, cart,tekenKey) {
         
         $scope.data = {};
 
@@ -25,9 +27,17 @@
         });
 
         $scope.sendOrder = function (shippingDetails) {
+            var token = sessionStorage.getItem(tokenKey);
+            console.log(token);
+            var headers = {};
+
+            if (token) {
+                headers.Authorization = 'Bearer ' + token;
+            }
+
             var order = angular.copy(shippingDetails);
             order.gadgets = cart.getProducts();
-            $http.post(saveTempOrdersUrl, order)
+            $http.post(saveTempOrdersUrl, order, { headers: { 'Authorization': 'Bearer ' + token } })
             .success(function (data, status, headers, config) {
                 $scope.data.OrderLocation = headers('Location');
                 $scope.data.OrderID = data.OrderID;
@@ -35,7 +45,11 @@
                 $scope.saveOrder();
             })
             .error(function (error) {
-                $scope.data.orderError = error;
+                if (status != 401)
+                    $scope.data.orderError = data.Message;
+                else {
+                    $location.path("/login");
+                }                
             }).finally(function () {
                 $location.path("/complete");
             });
@@ -72,6 +86,13 @@
             .error(function (error) {
                 console.log('error checking session: ' + error);
             });
+        }
+
+        $scope.logout = function () {
+            sessionStorage.removeItem(tokenKey);
+        }
+        $scope.createAccount = function () {
+            $location.path("/register");
         }
 
     });

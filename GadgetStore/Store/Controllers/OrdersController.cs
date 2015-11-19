@@ -13,6 +13,7 @@ using System.Web.Http.Description;
 
 namespace Store.Controllers
 {
+    [Authorize]
     public class OrdersController : ApiController
     {
         private StoreContext db = new StoreContext();

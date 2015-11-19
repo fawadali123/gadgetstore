@@ -10,3 +10,7 @@ E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\EntityFramework.SqlSer
 E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\Domain.pdb
 E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\EntityFramework.xml
 E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\MVC\AngularFeatWebApi\GadgetStore\DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
